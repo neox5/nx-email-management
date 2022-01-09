@@ -13,6 +13,7 @@ import * as sampleJson from "./sampleTemplate.json";
           <button class="save" (click)="onClickLoadSecondTemplate()">
             LOAD SECOND TEMPLATE
           </button>
+          <button class="save" (click)="onClickSaveAsHtml()">EXPORT HTML</button>
           <button class="save" (click)="onClickSaveTemplate()">
             SAVE TEMPLATE
           </button>
@@ -36,6 +37,10 @@ export class DashboardViewComponent {
 
   public onClickLoadSecondTemplate(): void {
     this._emailEditor.loadDesign(sampleJson);
+  }
+
+  public onClickSaveAsHtml(): void {
+    this._emailEditor.exportHtml((data) => console.log("exportHtml:", data));
   }
 
   public onClickSaveTemplate(): void {
