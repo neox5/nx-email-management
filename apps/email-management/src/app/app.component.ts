@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: "em-root",
-  template: ` <em-nx-welcome></em-nx-welcome> `,
+  template: ` <router-outlet></router-outlet>  `,
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {

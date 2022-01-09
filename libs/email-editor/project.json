@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/email-editor",
+  "sourceRoot": "libs/email-editor/src",
+  "prefix": "ee",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/email-editor"],
+      "options": {
+        "jestConfig": "libs/email-editor/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/email-editor/src/**/*.ts",
+          "libs/email-editor/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

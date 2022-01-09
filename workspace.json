@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "email-editor": "libs/email-editor",
     "email-management": "apps/email-management",
     "email-management-e2e": "apps/email-management-e2e"
   }
