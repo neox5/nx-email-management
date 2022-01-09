@@ -1,0 +1,28 @@
+{
+  "root": "apps/email-management-e2e",
+  "sourceRoot": "apps/email-management-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/email-management-e2e/cypress.json",
+        "devServerTarget": "email-management:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "email-management:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/email-management-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["email-management"]
+}
